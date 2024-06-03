@@ -17,7 +17,7 @@ function Signup() {
     event.preventDefault();
     setErrors(Validation(values));
     if (errors.name === "" && errors.email === "" && errors.password === "") {
-      axios.post('http://localhost:8081/signup', values)
+      axios.post('https://orbital-api-6a176aff984e.herokuapp.com/signup', values)
       .then(res => {
         navigate('/');
       })
